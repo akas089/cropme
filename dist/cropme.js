@@ -935,6 +935,11 @@
     var image_origin_rotation = this.options.transformOrigin;
     var tx = (nx - this.properties.x) * xs;
     var ty = (ny - this.properties.y) * ys;
+    
+    if(options.mimetype == "image/jpeg"){
+        ctx.fillStyle = "white";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
 
     if (image_origin_rotation === 'image') {
       ctx.translate(tx, ty);
